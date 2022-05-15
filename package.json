@@ -1,0 +1,50 @@
+{
+  "name": "catering_service",
+  "version": "1.0.0",
+  "description": "Niraj Caterer Web App",
+  "main": "index.js",
+  "dependencies": {
+    "@material/button": "^13.0.0",
+    "@material/checkbox": "^13.0.0",
+    "@material/dialog": "^13.0.0",
+    "@material/drawer": "^13.0.0",
+    "@material/fab": "^13.0.0",
+    "@material/icon-button": "^13.0.0",
+    "@material/image-list": "^13.0.0",
+    "@material/layout-grid": "^13.0.0",
+    "@material/menu": "^13.0.0",
+    "@material/select": "^13.0.0",
+    "@material/snackbar": "^13.0.0",
+    "@material/textfield": "^13.0.0",
+    "@material/top-app-bar": "^13.0.0",
+    "fs": "^0.0.1-security",
+    "material-components-web": "^13.0.0",
+    "material-design-icons-iconfont": "^6.1.0",
+    "material-icons": "^1.9.1",
+    "material-icons-font": "^2.1.0",
+    "pdfobject": "^2.2.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "autoprefixer": "^10.3.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.4.0",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "material-design-icons": "^3.0.1",
+    "postcss-loader": "^6.2.0",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0",
+    "webpack-dev-server": "^4.3.1",
+    "webpack-material-design-icons": "^0.1.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --mode development"
+  },
+  "author": "Sk Khurshid Alam",
+  "license": "ISC"
+}

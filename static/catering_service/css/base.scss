@@ -1,0 +1,31 @@
+@import "@material/typography/mdc-typography";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/button/mdc-button";
+@import "@material/dialog/mdc-dialog";
+@import "@material/snackbar/mdc-snackbar";
+
+html {
+  --mdc-typography-button-font-size: 16px;
+  --mdc-typography-button-text-transform: none;
+}
+body {
+    min-height: 100vh;
+}
+
+.mdc-dialog .mdc-dialog__surface {
+max-width: none !important;
+}
+.mdc-button{
+  background-color: #417690 !important;
+  color: white !important;
+}
+.mdc-button__danger{
+  background-color: #CC3434 !important;
+  color: white !important;
+}
+.mdc-deprecated-list-item--activated{
+  color: #417690 !important;
+}
+.mdc-deprecated-list-item__graphic{
+  color: #417690 !important;
+}

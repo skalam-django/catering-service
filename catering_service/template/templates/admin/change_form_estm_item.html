@@ -1,0 +1,24 @@
+{% extends "admin/change_form.html" %}
+{% load i18n static %}
+{% block submit_buttons_bottom %}
+    {{ block.super }}
+    <div class="submit-row">
+        <input type="submit" value="{{custom_button_value}}" name="{{custom_button_name}}">
+<!--         <input type="submit" value="Export Ingredients as PDF" name="_export-ingredients-as-pdf">
+        <input type="submit" value="Export Vegetables as PDF" name="_export-vegetables-as-pdf">
+        <input type="submit" value="Export Others as PDF" name="_export-others-as-pdf">   -->      
+    </div>     
+{% endblock %}
+
+{% block admin_change_form_document_ready %}
+{{ block.super }}
+
+    <script type="text/javascript">
+
+        (function($) {
+            document.querySelector('.closelink').href = "{{closelink}}"
+        })(django.jQuery);        
+
+    </script>
+
+{% endblock %}

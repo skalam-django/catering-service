@@ -1,0 +1,42 @@
+<script type="text/javascript">
+	let menu_pdfs = new Object();
+</script>
+{% if pdf_chunks %}
+	{% for pdfs in pdf_chunks %}
+		<div class="mdc-layout-grid__inner">
+			{% for pdf in pdfs %}
+				<div class="mdc-layout-grid__cell" style="max-width: 370px;">
+				    <div class="mdc-image-list__image-aspect-container" style="padding-bottom: 5px !important;">
+				      <div id="pdf-{{pdf.id}}"></div>
+				      <script type="text/javascript">
+				      	menu_pdfs["pdf-{{pdf.id}}"] = "{{pdf.menu_pdf}}"
+				      </script>
+				    </div>
+				    <div class="mdc-image-list__supporting">
+						<div class="mdc-form-field">
+						  <div class="mdc-checkbox">
+						    <input type="checkbox"
+						           class="mdc-checkbox__native-control"
+						           id="checkbox-{{pdf.id}}"/>
+						    <div class="mdc-checkbox__background">
+						      <svg class="mdc-checkbox__checkmark"
+						           viewBox="0 0 24 24">
+						        <path class="mdc-checkbox__checkmark-path"
+						              fill="none"
+						              d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+						      </svg>
+						      <div class="mdc-checkbox__mixedmark"></div>
+						    </div>
+						    <div class="mdc-checkbox__ripple"></div>
+						  </div>
+						  <label id="lbl-{{pdf.id}}" for="checkbox-{{pdf.id}}">Unnamed.pdf</label>
+						</div>
+				    </div>					    	
+				</div>
+			{% endfor %}	
+		</div>
+	{% endfor %}
+{% else %}
+	<h3 style="text-align: center;">No pdf available for the selected menu</h3>	
+{% endif %}
+	

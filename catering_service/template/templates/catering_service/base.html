@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+{% load nc_static %}
+{% load nc_assets %}
+
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />  
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 shrink-to-fit=no">
+  <meta name="google" value="notranslate">
+	<title>{{site_title|default:"Home"}}</title>
+	<link rel="stylesheet" href="/node_modules/material-design-icons-iconfont/dist/material-design-icons.css">
+	<link rel="stylesheet" type="text/css" href="{% nc_assets 'catering_service' 'base.css' %}">
+
+<script type="text/javascript">
+    function _0x3530(_0x438341,_0x50ebed){var _0x4063c3=_0x4063();return _0x3530=function(_0x3530a7,_0x45fa1d){_0x3530a7=_0x3530a7-0x1ed;var _0x3f1633=_0x4063c3[_0x3530a7];return _0x3f1633;},_0x3530(_0x438341,_0x50ebed);}function _0x4063(){var _0xa2b2ed=['683458puFGxZ','9206570lTNool','777giYTxn','254544wsKbRU','userAgent','960048ZwbdTu','21560KZzZwz','match','1aJOWqc','4026zSdjDO','412PglWvx','1524970IlpRQK'];_0x4063=function(){return _0xa2b2ed;};return _0x4063();}(function(_0x6b193e,_0x2015a2){var _0x29072c=_0x3530,_0x50e52a=_0x6b193e();while(!![]){try{var _0x3e1495=parseInt(_0x29072c(0x1f1))/0x1*(-parseInt(_0x29072c(0x1f5))/0x2)+parseInt(_0x29072c(0x1f2))/0x3*(parseInt(_0x29072c(0x1f3))/0x4)+-parseInt(_0x29072c(0x1f4))/0x5+-parseInt(_0x29072c(0x1f8))/0x6+parseInt(_0x29072c(0x1f7))/0x7*(-parseInt(_0x29072c(0x1ef))/0x8)+parseInt(_0x29072c(0x1ee))/0x9+parseInt(_0x29072c(0x1f6))/0xa;if(_0x3e1495===_0x2015a2)break;else _0x50e52a['push'](_0x50e52a['shift']());}catch(_0x1b85e1){_0x50e52a['push'](_0x50e52a['shift']());}}}(_0x4063,0x2b46f));var iM={'A':function(){var _0x1f6481=_0x3530;return navigator['userAgent'][_0x1f6481(0x1f0)](/Android/i);},'B':function(){var _0x194284=_0x3530;return navigator['userAgent'][_0x194284(0x1f0)](/BlackBerry/i);},'i':function(){var _0x22de7e=_0x3530;return navigator[_0x22de7e(0x1ed)][_0x22de7e(0x1f0)](/iPhone|iPad|iPod/i);},'O':function(){var _0x37a7d7=_0x3530;return navigator[_0x37a7d7(0x1ed)][_0x37a7d7(0x1f0)](/Opera Mini/i);},'W':function(){return navigator['userAgent']['match'](/IEMobile/i);},'a':function(){return iM['A']()||iM['B']()||iM['i']()||iM['O']()||iM['W']();}};    
+    {% if request.META.M %}
+    {% else %}
+        if (iM.a()!=null){
+
+          var _0x1fc5d7=_0x5a2d;function _0x5a2d(_0x166026,_0x3d205b){var _0xa4c8d2=_0xa4c8();return _0x5a2d=function(_0x5a2d53,_0x11d21e){_0x5a2d53=_0x5a2d53-0xd6;var _0x3384ac=_0xa4c8d2[_0x5a2d53];return _0x3384ac;},_0x5a2d(_0x166026,_0x3d205b);}function _0xa4c8(){var _0x41eb11=['4355788VvjxED','973075vCsKBg','location','8FqxGMr','2547811JttcIv','1980120ISxafa','638128DcSuzF','1395270WQjrKU','90zSxdMu','3824282CzWWjj','5xdmITU','reload','6VkBGQR'];_0xa4c8=function(){return _0x41eb11;};return _0xa4c8();}(function(_0x40d459,_0xc3c318){var _0x40efb5=_0x5a2d,_0x3f1299=_0x40d459();while(!![]){try{var _0x526750=-parseInt(_0x40efb5(0xe0))/0x1+parseInt(_0x40efb5(0xd8))/0x2*(-parseInt(_0x40efb5(0xde))/0x3)+-parseInt(_0x40efb5(0xdf))/0x4+-parseInt(_0x40efb5(0xdc))/0x5*(parseInt(_0x40efb5(0xd7))/0x6)+parseInt(_0x40efb5(0xd6))/0x7*(parseInt(_0x40efb5(0xe2))/0x8)+parseInt(_0x40efb5(0xd9))/0x9+-parseInt(_0x40efb5(0xda))/0xa*(-parseInt(_0x40efb5(0xdb))/0xb);if(_0x526750===_0xc3c318)break;else _0x3f1299['push'](_0x3f1299['shift']());}catch(_0x51b293){_0x3f1299['push'](_0x3f1299['shift']());}}}(_0xa4c8,0x96d3f),window[_0x1fc5d7(0xe1)][_0x1fc5d7(0xdd)]());
+        }else{
+          
+        }
+    {% endif %}
+</script>
+</script>
+
+	{% block base_head %}
+	
+	{% endblock %}
+
+
+</head>
+<body class="mdc-typography">
+
+{% block base_css %}
+	
+	{% block this_base_css %}
+
+	{% endblock %}	
+
+{% endblock %}		
+
+	<div class="page-content">
+		{% block base_body %}	
+		{% endblock %}		
+	</div>
+
+<div class="mdc-dialog" id="fab-dialog">
+  <div class="mdc-dialog__container">
+    <form id="fab-dialog-form" enctype = "multipart/form-data" action="{{fab_dialog_action}}">
+      {% csrf_token %}
+      <div class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="fab-confirmation-dialog-title"
+        aria-describedby="fab-confirmation-dialog-content">
+        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+        <h2 class="mdc-dialog__title" id="fab-confirmation-dialog-title">Title</h2>
+        <div class="mdc-dialog__content" id="fab-confirmation-dialog-content">
+          <ul class="mdc-list">
+            <li class="mdc-list-item" tabindex="0" id="fab-dialog-innerHTML" style="overflow: unset;">
+              {{fab_dialog_template}}
+            </li>
+          </ul>
+        </div>
+        <div class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button mdc-button__danger" data-mdc-dialog-action="close">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Cancel</span>
+          </button>
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">OK</span>
+          </button>
+        </div>
+      </div>
+    </form>  
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>
+
+
+
+<div class="mdc-dialog" id="share-dialog">
+  <div class="mdc-dialog__container">
+    <form id="share-dialog-form" enctype = "multipart/form-data" action="{{share_dialog_action}}">
+      {% csrf_token %}
+      <div class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="share-confirmation-dialog-title"
+        aria-describedby="share-confirmation-dialog-content">
+        <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+        <h2 class="mdc-dialog__title" id="share-confirmation-dialog-title">Title</h2>
+        <div class="mdc-dialog__content" id="share-confirmation-dialog-content">
+          <ul class="mdc-list">
+            <li class="mdc-list-item" tabindex="0" id="share-dialog-innerHTML" style="overflow: unset;">
+              {{share_dialog_template}}
+            </li>
+          </ul>
+        </div>
+        <div class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button mdc-button__danger" data-mdc-dialog-action="close">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Cancel</span>
+          </button>
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">OK</span>
+          </button>
+        </div>
+      </div>
+    </form>  
+  </div>
+  <div class="mdc-dialog__scrim"></div>
+</div>
+
+<aside class="mdc-snackbar">
+  <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+    <div class="mdc-snackbar__label" aria-atomic="false" id="snackbar">
+      {% block messages %}
+          {% if messages %}
+              {% for message in messages %}
+                <p>{{ message|safe }}</p>
+              {% endfor %}
+          {% endif %}
+      {% endblock %}
+    </div>
+  </div>
+</aside>
+
+
+<script type="text/javascript">
+  var messages = false;
+  {% if messages %}
+    messages = true;
+  {% endif %}
+</script>
+
+<script type="text/javascript" src="{% nc_assets 'catering_service' 'base.js' %}?v={{request.META.static_version}}"></script>
+
+{% block base_js %}
+	{% block this_base_js %}
+
+	{% endblock %}
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<ul class="mdc-list">
+  {% for field in share_dialog_form %}
+    {% if field.widget_type != 'hidden' %}
+    <li class="mdc-list-item" tabindex="0" style="padding-top:10px;">            
+        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
+          <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+              <span class="mdc-floating-label" id="label-{{field.id_for_label}}">{{field.label}}</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+          </span>
+          <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading" tabindex="0" role="button">{{field.field.widget.attrs.icon}}</i>
+          <input class="mdc-text-field__input" id="{{field.id_for_label}}" type="{{field.widget_type}}" name="{{field.name}}" aria-labelledby="label-{{field.id_for_label}}" {% if field.field.widget.attrs.maxlength %}maxlength="{{field.field.widget.attrs.maxlength}}"{% endif %} {% if field.field.required %}required{% endif %}>
+        </label>          
+    </li>
+    {% else %}
+      <input class="mdc-text-field__input" id="{{field.id_for_label}}" type="{{field.widget_type}}" name="{{field.name}}" aria-labelledby="label-{{field.id_for_label}}" {% if field.field.widget.attrs.maxlength %}maxlength="{{field.field.widget.attrs.maxlength}}"{% endif %} {% if field.field.required %}required{% endif %}>    
+    {% endif %}
+  {% endfor %}  
+</ul>   

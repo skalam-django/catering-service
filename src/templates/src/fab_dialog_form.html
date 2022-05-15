@@ -1,0 +1,32 @@
+<ul class="mdc-list">
+  {% for field in fab_dialog_form %}
+    <li class="mdc-list-item" tabindex="0" style="padding-top:10px;">
+      {% if field.widget_type == "text" %}              
+        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
+          <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+              <span class="mdc-floating-label" id="label-{{field.id_for_label}}">{{field.label}}</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+          </span>
+          <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading" tabindex="0" role="button">widgets</i>
+          <input class="mdc-text-field__input" id="{{field.id_for_label}}" type="text" name="{{field.name}}" aria-labelledby="label-{{field.id_for_label}}" {% if field.field.widget.attrs.maxlength %}maxlength="{{field.field.widget.attrs.maxlength}}"{% endif %} {% if field.field.required %}required{% endif %}>
+        </label>          
+      {% elif field.widget_type == "file" %}
+        <label class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
+          <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+              <span class="mdc-floating-label" id="label-{{field.id_for_label}}">Upload PDF File</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+          </span>
+          <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading" tabindex="1" role="button">attach_file</i>
+          <input class="mdc-text-field__input" type="text" name="menu-pdf-file" aria-labelledby="label-{{field.id_for_label}}" {% if field.field.required %}required{% endif %}>
+          <input type="file" {% if field.field.widget.attrs.accept %}accept="{{field.field.widget.attrs.accept}}"{% endif %} name="{{field.name}}" style="display: none;" {% if field.field.required %}required{% endif %}/>
+        </label>  
+      {% endif %}
+    </li>
+  {% endfor %}  
+</ul>   

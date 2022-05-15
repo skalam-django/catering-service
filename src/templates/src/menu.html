@@ -1,0 +1,86 @@
+{% extends layout_1 %}
+{% load static %}
+{% load nc_static %}
+{% load nc_assets %}
+
+{% block this_base_head %}
+
+{% endblock %}	
+	
+{% block this_base_css %}
+	<link rel="stylesheet" type="text/css" href="{% nc_assets 'src' 'menu.css' %}">
+{% endblock %}	
+
+{% block this_base_body %}
+
+	<div class="mdc-select mdc-select--outlined" style="margin-top:35px; z-index: 5;">
+	  <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
+	    <span class="mdc-notched-outline">
+	      <span class="mdc-notched-outline__leading"></span>
+	      <span class="mdc-notched-outline__notch">
+	        <span id="outlined-select-label" class="mdc-floating-label">Select Menu</span>
+	      </span>
+	      <span class="mdc-notched-outline__trailing"></span>
+	    </span>
+	    <span class="mdc-select__selected-text-container">
+	      <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+	    </span>
+	    <span class="mdc-select__dropdown-icon">
+	      <svg
+	          class="mdc-select__dropdown-icon-graphic"
+	          viewBox="7 10 10 5" focusable="false">
+	        <polygon
+	            class="mdc-select__dropdown-icon-inactive"
+	            stroke="none"
+	            fill-rule="evenodd"
+	            points="7 10 12 15 17 10">
+	        </polygon>
+	        <polygon
+	            class="mdc-select__dropdown-icon-active"
+	            stroke="none"
+	            fill-rule="evenodd"
+	            points="7 15 12 10 17 15">
+	        </polygon>
+	      </svg>
+	    </span>
+	  </div>
+
+	  <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+
+	    <ul class="mdc-list">
+	      <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true">
+	        <span class="mdc-list-item__ripple"></span>
+	      </li>
+	      {% for object_tpl in object_list %}
+				<li class="mdc-list-item" data-value="{{object_tpl.0}}" tabindex="{{forloop.counter1}}">
+				  <span class="mdc-list-item__ripple"></span>
+				  <span class="mdc-list-item__text">{{object_tpl.1}}</span>
+				</li>
+			{% endfor %}	
+
+	    </ul>    
+
+	  </div>
+	</div>  		
+
+	<ul class="mdc-image-list my-image-list" style="margin-top:10px; z-index:0; transform: translate(0px, 87px);">
+	  <li class="mdc-image-list__item" style="margin-top: 5px; width:100%;">
+			<div class="mdc-layout-grid mdc-layout-grid__cell--align-middle">
+				{% if menu_pdfs %}
+					{{menu_pdfs}}
+				{% else %}
+					<h3 style="text-align: center;">No pdf available for the selected menu</h3>
+				{% endif %}
+			</div>
+	  </li>
+	  
+	</ul>
+{% endblock %}	
+
+{% block this_base_js %}
+	<script type="text/javascript" src="/node_modules/pdfobject/pdfobject.js"></script>
+	<script type="text/javascript" src="{% nc_assets 'src' 'menu.js' %}?v={{request.META.static_version}}"></script>
+{% endblock %}
+</body>
+</html>
+
